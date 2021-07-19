@@ -1,0 +1,7 @@
+{
+  "name": "Mapss",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

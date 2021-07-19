@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+  canvas.mapboxgl-canvas {width:100% !important;height:100% !important;}  
+  .mapboxgl-ctrl-top-right .mapboxgl-ctrl    { margin: 70px 10px 0 0 !important;}
+  .mapboxgl-ctrl-top-left{
+    display:none;
+  }
+  .mapboxgl-ctrl.mapboxgl-ctrl-group {
+    display: block !important;
+  }
+  .mapboxgl-ctrl-geocoder input[type='text'] {
+  font-size:medium !important;
+  height: 50px !important;
+  padding-left: 40px !important;
+  margin:0;
+  color:rgba(0,0,0,.5);
+  padding:10px 40px 10px 10px; 
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  overflow:hidden;
+  }
+
+  </style>
+  
+  <meta charset="utf-8" />
+  <title>IonMap</title>
+
+  <base href="/" />
+
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+
+  <link rel="icon" type="image/png" href="assets/icon/favicon.png" />  
+  <link rel="icon" type="image/png" href="assets/icon/street.jpg" /> 
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.0/mapbox-gl.css' rel='stylesheet' />
+  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.0/mapbox-gl-directions.js'></script>
+        <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.0/mapbox-gl-directions.css' type='text/css' />  
+  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.0/mapbox-gl-geocoder.min.js'></script>
+  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.0/mapbox-gl-geocoder.css' type='text/css' /> 
+  
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+  <style>
+    @media screen and (min-width: 640px){
+      .mapboxgl-ctrl-geocoder--icon-search{
+          position: absolute;
+          top: 13px;
+          left: 12px;
+          width: 23px;
+          height: 23px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  
+  <app-root></app-root>
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end" class="tochange ion-color ion-color-danger md ion-activatable ion-focusable hydrated">
+    <ion-fab-button size="small" color="danger" >
+        <ion-icon name="navigate" id="direction" type="button" value="navi"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="start">
+    </ion-fab-list>
+  </ion-fab>
+
+</body>
+<script>
+    $( ".tochange" ).click(function() {
+        $( ".mapboxgl-ctrl-top-left" ).toggle(200);
+        $( ".geocoder" ).toggle(200);
+    });
+</script>
+</html>

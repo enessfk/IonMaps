@@ -1,0 +1,38 @@
+
+  <ion-content>
+    
+        <ion-fab  slot="fixed" vertical="bottom" horizontal="start" >
+          <ion-fab-button size="small" color="warning">
+            <ion-icon name="arrow-forward-circle"></ion-icon>
+          </ion-fab-button>
+        <ion-fab-list side="end">
+            <ion-fab-button>
+                <div class="menu">
+                 <img src="assets/icon/street.jpg" alt="street" id='streets-v11' type='button' name='rtoggle' value='Streets' checked='checked'>
+                </div>
+            </ion-fab-button>
+            <ion-fab-button>
+                <div class="menu">
+                    <img src="assets/icon/dark.jpg" alt="dark" id='dark-v10' type='button' name='rtoggle' value='Dark'>
+                </div>
+            </ion-fab-button> 
+            <ion-fab-button>
+                <div class="menu">
+                   <img src="assets/icon/satellite.jpg" alt="satellite" input id='satellite-v9' type='button' name='rtoggle' value='Satellite'>
+            </div>
+            </ion-fab-button> 
+        </ion-fab-list> 
+      </ion-fab>
+
+      <ion-fab slot="fixed" vertical="bottom" horizontal="end" class="tochange">
+        <ion-fab-button color="danger" >
+            <ion-icon name="navigate" id="direction" type="button" value="navi"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+
+    <div id='geocoder' class='geocoder'></div>
+    <div id="map" class="mapClass"></div>
+
+  </ion-content>
+
+  
